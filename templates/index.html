@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body class="bg-[url('/static/image/header.jpg')] bg-cover h-screen w-full">
+    <div class=" ">
+        <div class=" text-white m-auto w-full">
+            <div class="flex mt-2 h-screen items-center   ">
+                <div
+                    class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-8 md:items-start  w-full">
+                    <div class="w-full max-w-md bg-white rounded-lg shadow-md p-2 md:p-6 mx-auto md:mx-3 card-users">
+                        <h2 class="text-xl md:text-2xl font-bold text-white mb-4 ">
+                            Input Data
+                        </h2>
+
+                        <div class="flex flex-col">
+                            <div class="flex gap-2  md:flex-col ">
+                                <div>
+                                    <div class="flex flex-col">
+                                        <label for="luas-kos">Luas Kos (m2)</label>
+                                        <input type="number"
+                                            class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                            id="luas-kos" placeholder="Masukkan Luas Kos" />
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <label for="jarak-kampus">Jarak Kampus (m)</label>
+                                        <input type="number"
+                                            class="bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                            id="jarak-kampus" placeholder="Masukkan Jarak Kos Ke Kampus" />
+                                    </div>
+                                </div>
+                                <!-- Luas Kos -->
+
+
+                                <!-- fasilitas -->
+                                <div class="flex flex-col">
+                                    <label for="list-fasilitas">Fasilitas</label>
+                                    <div class="flex" id="list-fasilitas">
+                                        <input class="mx-2" type="checkbox" name="fasilitas" id="fasilitas" value="8">
+                                        <label for="fasilitas">AC</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input class="mx-2" type="checkbox" name="fasilitas" id="fasilitas" value="3">
+                                        <label for="fasilitas">Kasur</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input class="mx-2" type="checkbox" name="fasilitas" id="fasilitas" value="3">
+                                        <label for="fasilitas">Lemari Baju</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input class="mx-2" type="checkbox" name="fasilitas" id="fasilitas" value="5">
+                                        <label for="fasilitas">TV</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input class="mx-2" type="checkbox" name="fasilitas" id="fasilitas" value="2">
+                                        <label for="fasilitas">Meja</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input class="mx-2" type="checkbox" name="fasilitas" id="fasilitas" value="10">
+                                        <label for="fasilitas">Kamar Mandi Dalam</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input class="mx-2" type="checkbox" name="fasilitas" id="fasilitas" value="2">
+                                        <label for="fasilitas">Kipas Angin</label>
+                                    </div>
+                                    <div class="flex">
+                                        <input class="mx-2" type="checkbox" name="fasilitas" id="fasilitas" value="6">
+                                        <label for="fasilitas">Dapur</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" id="generate-harga"
+                                class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150">
+                                Generate Harga
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-users p-2 md:p-6 m-auto md:m-0 w-full md:w-auto">
+                        <div class="flex flex-col">
+                            <label for="luas-kos">Hasil</label>
+                            <input type="text"
+                                class="bg-gray-200 text-black border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                                id="hasil" value="Rp. 0" disabled />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="static/js/app.js"></script>
+</body>
+
+</html>

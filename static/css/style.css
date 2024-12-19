@@ -1,0 +1,10 @@
+.card-users {
+    background: rgba(255, 255, 255, 0.2) !important; /* Transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.3) !important; /* Border with opacity */
+    backdrop-filter: blur(10px) !important; /* Glass effect */
+    -webkit-backdrop-filter: blur(10px) !important; /* Safari support */
+    border-radius: 15px !important; /* Smooth corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow */
+    overflow: hidden !important; /* Ensure content stays inside rounded corners */
+    text-decoration: none;
+}

@@ -15,10 +15,10 @@ def fuzzify_jarak(jarak):
 
 def fuzzify_fasilitas(fasilitas):
     # Fuzzy logic for "biasa" (range 0-20)
-    biasa = max(0, min((20 - fasilitas) / 20, 1)) if fasilitas <= 20 else 0
+    biasa = max(0, min((6 - fasilitas) / 6, 1)) if fasilitas <= 6 else 0
 
     # Fuzzy logic for "lengkap" (range 15-31)
-    lengkap = max(0, min((fasilitas - 15) / 16, 1)) if fasilitas >= 15 else 0
+    lengkap = max(0, min((fasilitas - 6) / 6, 1)) if fasilitas > 6 else 0
 
     return biasa, lengkap
 
@@ -70,8 +70,9 @@ def mamdani(luas, jarak, fasilitas):
     return defuzzified_value
 
 # Example usage
-luas = 12
-jarak = 1200
-fasilitas = 10
+luas = 16
+jarak = 1300
+fasilitas = 18
+
 harga = mamdani(luas, jarak, fasilitas)
 print(f"Harga kos-kosan adalah: Rp {harga:.0f}")

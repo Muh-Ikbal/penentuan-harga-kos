@@ -120,12 +120,12 @@ def tsukamoto(luas, jarak, fasilitas):
                 harga = 500000 + weight * (800000 - 500000)
             elif label == "Mahal":
                 harga = 700000 + weight * (1600000 - 700000)
-    # for label, weight in rules:
-    #     if weight > 0:
-    #         if label == "Murah":
-    #             harga = weight * 800000  # For "Murah", the price is based on the weight scaled up to 800,000
-    #         elif label == "Mahal":
-    #             harga = 700000 + weight * (1600000 - 700000)
+            # for label, weight in rules:
+            #     if weight > 0:
+            #         if label == "Murah":
+            #             harga = weight * 800000  # For "Murah", the price is based on the weight scaled up to 800,000
+            #         elif label == "Mahal":
+            #             harga = 700000 + weight * (1600000 - 700000)
             harga_rules.append((weight, harga))
 
     return defuzzify(harga_rules)
@@ -133,7 +133,8 @@ def tsukamoto(luas, jarak, fasilitas):
 
 # Example usage
 luas = 12
-jarak = 1200
-fasilitas = 10
+jarak = 2100
+fasilitas = 21
+
 harga = tsukamoto(luas, jarak, fasilitas)
 print(f"Harga kos-kosan adalah: Rp {harga:.0f}")
